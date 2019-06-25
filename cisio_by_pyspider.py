@@ -31,7 +31,7 @@ class Handler (BaseHandler):
 
     @config (age=10 * 24 * 60 * 60)
     def index_page(self, response):
-        # ½âÎöÒ³ÃæËùÓÐurl£¬»ñÈ¡Ã¿¸öurl¶ÔÓ¦µÄoidÖµ²¢·µ»Ø¸ølogin£¨£©
+        # ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½ï¿½ï¿½È¡Ã¿ï¿½ï¿½urlï¿½ï¿½Ó¦ï¿½ï¿½oidÖµï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½loginï¿½ï¿½ï¿½ï¿½
         for each in response.doc ('td > a').items ():
             result_one = re.findall (".*en/(.*).html.*", each.attr.href)
             result_two = re.findall (".*vertical/(.*).html.*", each.attr.href)
@@ -44,7 +44,7 @@ class Handler (BaseHandler):
 
     @config (priority=2)
     def detail_page(self, response):
-        # ½âÎöÃ¿¸öpdf¶ÔÓ¦µÄ±êÌâ¡¢´óÐ¡¡¢ºÍurl´æÈëmongodb£¬½«pdfÎÄ¼þ´æÈëÊý¾Ý¿â
+        # ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½pdfï¿½ï¿½Ó¦ï¿½Ä±ï¿½ï¿½â¡¢ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½ï¿½ï¿½mongodbï¿½ï¿½ï¿½ï¿½pdfï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
         i = response.save[ 'i' ]
    #     url = response.url
         title = response.doc ('.asset-desc').text ()
@@ -71,7 +71,7 @@ class Handler (BaseHandler):
     #    '.download-button'
 
     def login(self, response):
-        # post×¢²áµÇÂ¼£¬µÇÂ¼ºóµÄÒ³Ãæ·µ»Ø¸ødetail_page´¦Àí
+        # post×¢ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ò³ï¿½æ·µï¿½Ø¸ï¿½detail_pageï¿½ï¿½ï¿½ï¿½
         url = response.url
         Oid = response.save[ 'a' ]
         headers = {
@@ -81,11 +81,11 @@ class Handler (BaseHandler):
             'elqFormName': 'GRSDynamicOfferForm',
             'elqSiteId': '177775138',
             'elqCampaignId': '',
-            'lastName': 'jiahao',
-            'emailAddress': '1130056563@qq.com', 
-            'busPhone': '18271137390', 
+            'lastName': 'motan',
+            'emailAddress': '******',
+            'busPhone': '******',
             'company': 'Abc',
-            'dropdownMenu': '±±¾©',
+            'dropdownMenu': 'ï¿½ï¿½ï¿½ï¿½',
             'jobLevel1': 'CXO/Executive', 
             'department': 'MIS/IT - Applications Dev',
             'dropdownMenu2': 'Chemical & Petroleum', 
